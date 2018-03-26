@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Added the project path
     path('sample/', include('myproject.apps.sample.urls')),
+    path('sample_rest/', include('myproject.apps.sample_rest.urls')),
 ]
