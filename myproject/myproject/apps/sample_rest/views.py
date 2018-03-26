@@ -21,7 +21,6 @@ def users(request):
     serializer = UserListSerializer(data=u.getUsers())
 
     if serializer.is_valid():
-        # safe=False allows to return a list
         return JsonResponse(serializer.data, status=201, safe=False)
 
     return JsonResponse(serializer.errors, status=400)
@@ -33,10 +32,9 @@ def user(request, user_id):
 
     serializer = UserSerializer(data=u.getUser(user_id))
 
+    # print(serializer.is_valid())
     if serializer.is_valid():
-        # serializer.save()
-        # print(serializer.data)
-        # print(serializer.is_valid())
+        # print(serializer)
 
         return JsonResponse(serializer.data, status=201)
 

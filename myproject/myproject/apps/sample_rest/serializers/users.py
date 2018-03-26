@@ -4,6 +4,10 @@ from django.core.validators import validate_email
 
 from ..models.users import User
 
+"""
+    Another solution for the code below would be to use 
+    `serializers.Serializer` instead of `serializers.ModelSerializer`
+    and re-declare all fields and their types
 
 class UserSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
@@ -12,9 +16,15 @@ class UserSerializer(serializers.Serializer):
     email = serializers.CharField(
         required=False, allow_blank=True, max_length=200)
 
+    def create(self, validated_data):
+        ...
+"""
+
+
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        # fields = ('id', 'name', 'email')
+        fields = ('name', 'email')
 
     def create(self, validated_data):
         return UserSerializer()
@@ -34,6 +44,22 @@ class UserSerializer(serializers.Serializer):
             return email
 
     def validate_name(self, name):
+        return name
+
+    def save():
+        pass
+
+    def create(self, validated_data):
+        # return User.objects.create(**validated_data)
+
+        pass
+
+    def update(self, instance, validated_data):
+        # instance.name = validated_data.get('name', instance.name)
+        # instance.email = validated_data.get('email', instance.email)
+        # instance.save()
+        # return instance
+
         pass
 
 

@@ -49,22 +49,22 @@ Visit http://127.0.0.1:8000/sample/
 ```bash
 $ curl -s http://127.0.0.1:8000/sample_rest/user/2 | beautify
 {
-    "name": null,
+    "name": "Tom",
     "email": "tom@gmail.com"
 }
 
 $ curl -s http://127.0.0.1:8000/sample_rest/users | beautify 
 [
     {
-        "name": null,
+        "name": "Gab",
         "email": "gab@gmail.com"
     },
     {
-        "name": null,
+        "name": "Bob",
         "email": "bob@gmail.com"
     },
     {
-        "name": null,
+        "name": "Tom",
         "email": "tom@gmail.com"
     }
 ]
