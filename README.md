@@ -14,7 +14,8 @@ django-admin startproject myproject
 
 # Start App
 cd myproject
-python manage.py startapp sample
+mkdir -p myproject/apps/sample
+python manage.py startapp sample myproject/apps/sample
 ```
 
 ## Run the app
