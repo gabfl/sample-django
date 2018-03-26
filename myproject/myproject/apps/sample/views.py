@@ -61,8 +61,6 @@ def user(request, user_id):
         'email': u.getUser(user_id)['email'],
     }
 
-    print(context)
-
     # getting our template
     template = loader.get_template('user.html')
 
