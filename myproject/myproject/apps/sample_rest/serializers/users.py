@@ -14,8 +14,7 @@ class UserSerializer(serializers.Serializer):
 
     class Meta:
         model = User
-        #list_serializer_class = UserListSerializer
-        # fields = ('name', 'email')
+        # fields = ('id', 'name', 'email')
 
     def create(self, validated_data):
         return UserSerializer()
