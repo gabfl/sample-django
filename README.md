@@ -68,4 +68,10 @@ $ curl -s http://127.0.0.1:8000/sample_rest/users | beautify
         "email": "tom@gmail.com"
     }
 ]
+
+$ curl -X POST -s http://127.0.0.1:8000/sample_rest/parse -d '{"id": 2}' | beautify
+{
+    "name": "Tom",
+    "email": "tom@gmail.com"
+}
 ```

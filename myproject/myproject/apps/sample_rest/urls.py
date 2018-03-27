@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.hello),
     path('users', views.users),
     path('user/<int:user_id>', views.user),
+    path('parse', views.parseJson),
 ]
