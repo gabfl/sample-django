@@ -5,7 +5,7 @@ from django.core.validators import validate_email
 from ..models.users import User
 
 """
-    Another solution for the code below would be to use 
+    Another solution for the code below would be to use
     `serializers.Serializer` instead of `serializers.ModelSerializer`
     and re-declare all fields and their types
 
