@@ -1,5 +1,7 @@
 # sample-django
 
+[![Build Status](https://github.com/gabfl/sample-django/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/gabfl/sample-django/actions)
+
 Django basic example
 
 ## Installation
